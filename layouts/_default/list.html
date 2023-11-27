@@ -8,13 +8,27 @@
       <li class="post">
         <a href="{{ .Permalink}}" class="title">{{ .Title }}</a>
         <time class="date">{{ .PublishDate.Format "2006-01-02" }}</time>
+
+        <div class="post-info">
         {{ with .Params.tags }}
           <ul class="tags">
+            <span class="label">{{ partial "utils/icons" "pricetags-sharp" }}</span> 
           {{ range . }}
             <li class="hashed-tag"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
           {{ end }}
           </ul>
         {{ end }}
+        {{ with .Params.categories }}
+          <ul class="tags">
+             <span class="label">{{ partial "utils/icons" "shapes" }}</span> 
+          {{ range . }}
+            <li class="hashed-tag"><a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+          {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+
+
       </li>
       {{ end }}
     </ul>

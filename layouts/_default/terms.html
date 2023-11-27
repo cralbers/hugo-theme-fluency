@@ -9,7 +9,7 @@
     <ul class="term-columns">
       {{ range .Data.Terms.Alphabetical }} {{ if ne .Page.Title "" }}
       <li>
-        <a href="{{ .Page.Permalink }}" title="last seen at {{ .Page.Lastmod.Format "January 02, 2006" }}">{{ .Page.Title }}({{.Count}})</a>
+        <a href="{{ .Page.Permalink }}" title="last seen at {{ .Page.Lastmod.Format "January 02, 2006" }}">{{ .Page.Title }} ({{.Count}})</a>
       </li>
       {{ end }} {{ end }}
     </ul>
