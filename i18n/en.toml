@@ -38,5 +38,8 @@ other = "Tagged with"
 [shareWith]
 other = "Share with"
 
+[categorizedIn]
+other = "Categorized in"
+
 [toc]
 other = "Table of Contents"
